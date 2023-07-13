@@ -19,11 +19,8 @@ import CustomButton from '../../components/CustomButton';
 import BackArrow from '../../components/BackArrow';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
 
-
-
 export default function Verification({navigation}) {
   const [code, setCode] = useState('');
-
 
   const TitleButton = ({title, onPress, style}) => {
     return (
@@ -34,8 +31,7 @@ export default function Verification({navigation}) {
   };
 
   return (
-    <CustomScrollView
-      >
+    <CustomScrollView>
       <StatusBar
         barStyle="dark-content"
         backgroundColor={'transparent'}
@@ -45,47 +41,44 @@ export default function Verification({navigation}) {
         <BackArrow />
         <View style={{paddingBottom: 50}}></View>
         <RightImageView title="Verify">
-              <TitleButton
-                title={'Forgot'}
-                style={styles.signUpTitle}
+          <TitleButton title={'Forgot'} style={styles.signUpTitle} />
+          <View style={{paddingTop: 60}}>
+            <View style={{marginHorizontal: 10, marginVertical: 20}}>
+              <Text style={[FONTS.boldFont24, {color: COLORS.black}]}>
+                Verification
+              </Text>
+              <Text style={{color: COLORS.brownGrey, marginTop: SIZES.ten}}>
+                Enter the 4 digit code sent to your email address.
+              </Text>
+            </View>
+
+            <OTPInputView
+              style={{
+                width: '90%',
+                height: 80,
+                alignSelf: 'center',
+                marginBottom: 110,
+              }}
+              pinCount={4}
+              code={code}
+              // code={this.state.code} //You can supply this prop or not. The component will be used as a controlled / uncontrolled component respectively.
+              // onCodeChanged = {code => { this.setState({code})}}
+              onCodeChanged={code => setCode(code)}
+              autoFocusOnLoad
+              secureTextEntry
+              codeInputFieldStyle={styles.underlineStyleBase}
+              codeInputHighlightStyle={styles.underlineStyleHighLighted}
+              onCodeFilled={code => {}}
+            />
+
+            <View style={{paddingTop: 40}}>
+              <CustomButton
+                title="Continue"
+                onPress={() => navigation.navigate(SCREENS.ResetPassword)}
               />
-              <View style={{paddingTop: 60}}>
-
-
-              <View style={{marginHorizontal: 10, marginVertical: 20}}>
-                <Text style={[FONTS.boldFont24,{color:COLORS.black}]}>Verification</Text>
-                <Text style={{color: COLORS.brownGrey, marginTop: SIZES.ten}}>
-Enter the 4 digit code sent to your email address.
-                </Text>
-              </View>
-
-              <OTPInputView
-                style={{
-                  width: '90%',
-                  height: 80,
-                  alignSelf: 'center',
-                  marginBottom: 110,
-                }}
-                pinCount={4}
-                code={code}
-                // code={this.state.code} //You can supply this prop or not. The component will be used as a controlled / uncontrolled component respectively.
-                // onCodeChanged = {code => { this.setState({code})}}
-                onCodeChanged={code => setCode(code)}
-                autoFocusOnLoad
-                secureTextEntry
-                codeInputFieldStyle={styles.underlineStyleBase}
-                codeInputHighlightStyle={styles.underlineStyleHighLighted}
-                onCodeFilled={code => {}}
-              />
-      
-  
-                <View style={{paddingTop: 40}}>
-                  <CustomButton title="Continue" 
-                  onPress={() => navigation.navigate(SCREENS.ResetPassword)}
-                  />
-                </View>
-              </View>
-            </RightImageView>
+            </View>
+          </View>
+        </RightImageView>
       </SafeAreaView>
     </CustomScrollView>
   );
@@ -95,7 +88,6 @@ const styles = StyleSheet.create({
   image: {
     // flex: 1,
     height: height * 0.1,
-
   },
   signButton: {
     position: 'absolute',

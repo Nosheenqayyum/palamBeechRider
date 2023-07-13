@@ -6,7 +6,7 @@ export const {width, height} = Dimensions.get('window');
 /* *************** Colors ********** */
 export const COLORS = {
   // base colors
-  primary: '#0ABBB5',
+  primary: '#f35820',
   secondary: '#EA585C',
   textInput: '#E9E9E9',
 
@@ -57,6 +57,7 @@ export const FONTFAMILY = {
 
 /* * Images * */
 export const IMAGES = {
+  AppLogo: require('../assets/AppLogo.png'),
   splashBG: require('../assets/splashback.png'),
   splashWheel: require('../assets/splashshipwheel.png'),
   splashText: require('../assets/splashtext.png'),
@@ -78,6 +79,8 @@ export const SCREENS = {
   ForgetPassword: 'ForgetPassword',
   Verification: 'Verification',
   ResetPassword: 'ResetPassword',
+  Home: 'Home',
+  orderDetails: 'orderDetails',
   
 };
 
