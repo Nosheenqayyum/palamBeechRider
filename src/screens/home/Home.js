@@ -20,9 +20,7 @@ export default function Home({navigation}) {
 
 renderItem = ({item}) => (
     <MyTouchableOpacity
-    onPress={() => navigation.navigate(SCREENS.orderDetails)}
-
-    >
+    onPress={() => navigation.navigate(SCREENS.orderDetails)}>
 
 <View style={styles.listcard}>
         <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
@@ -85,7 +83,7 @@ renderItem = ({item}) => (
             marginTop: SIZES.ten,
           }}>
           <Icon name="map-marker-outline" size={20} color={COLORS.primary} />
-          <Text style={[FONTS.mediumFont16, {color: COLORS.BLACK}]}>
+          <Text style={[FONTS.mediumFont16, {color: COLORS.brownGrey}]}>
             1234 Palm Beach, FL 33480
           </Text>
           <View
@@ -193,7 +191,7 @@ renderItem = ({item}) => (
             marginTop: SIZES.ten,
           }}>
           <Icon name="map-marker-outline" size={20} color={COLORS.primary} />
-          <Text style={[FONTS.mediumFont16, {color: COLORS.BLACK}]}>
+          <Text style={[FONTS.mediumFont16, {color: COLORS.brownGrey}]}>
             1234 Palm Beach, FL 33480
           </Text>
           <View
@@ -205,6 +203,8 @@ renderItem = ({item}) => (
             <Icon name="map-marker-outline" size={20} color={COLORS.primary} />
           </View>
         </View>
+
+        
 
         <View style={{paddingTop: height * 0.03}}>
           <CustomButton
@@ -227,6 +227,13 @@ ListHeaderComponent={() =>
       flexDirection: 'row',
       justifyContent: 'space-between',
     }}>
+
+      <MyTouchableOpacity 
+      onPress={() => navigation.navigate(SCREENS.mapsView)}>
+        <Text>
+          Click me
+        </Text>
+      </MyTouchableOpacity>
     <Text style={[FONTS.mediumFont16, {color: COLORS.BLACK}]}>
       Today's Orders
     </Text>

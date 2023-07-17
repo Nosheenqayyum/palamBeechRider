@@ -38,7 +38,9 @@ export default function Verification({navigation}) {
         translucent={true}
       />
       <SafeAreaView>
-        <BackArrow />
+        <View style={{paddingHorizontal: 15}}>
+          <BackArrow />
+        </View>
         <View style={{paddingBottom: 50}}></View>
         <RightImageView title="Verify">
           <TitleButton title={'Forgot'} style={styles.signUpTitle} />

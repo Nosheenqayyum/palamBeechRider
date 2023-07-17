@@ -9,6 +9,8 @@ import Verification from "../screens/auth/Verification"
 import ResetPassword from "../screens/auth/ResetPassword";
 import Home from "../screens/home/Home";
 import orderDetails from "../screens/orders/orderDetails";
+import MapsView from "../screens/home/mapsView";
+import chat from "../screens/chat/chat";
 
 export default function MainNavigation() {
     const Stack = createNativeStackNavigator();
@@ -27,6 +29,9 @@ export default function MainNavigation() {
                 <Stack.Screen name={SCREENS.ResetPassword} component={ResetPassword} />
                 <Stack.Screen name={SCREENS.Home} component={Home} />
                 <Stack.Screen name={SCREENS.orderDetails} component={orderDetails} />
+                <Stack.Screen name={SCREENS.mapsView} component={MapsView} />
+                <Stack.Screen name={SCREENS.chat} component={chat} />
+
 
             </Stack.Navigator>
         </NavigationContainer>

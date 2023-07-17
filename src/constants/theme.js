@@ -65,6 +65,8 @@ export const IMAGES = {
   backgroundSignUp: require('../assets/backgroundsecondary.png'),
   SignButton: require('../assets/buttonsignlogin.png'),
   logo: require('../assets/logo.png'),
+Profile: require('../assets/profile.png'), 
+  
 
 };
 
@@ -81,6 +83,8 @@ export const SCREENS = {
   ResetPassword: 'ResetPassword',
   Home: 'Home',
   orderDetails: 'orderDetails',
+  mapsView: 'mapsView',
+  chat: 'chat',
   
 };
 

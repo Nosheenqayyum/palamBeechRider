@@ -23,7 +23,9 @@ export default function Verification({navigation}) {
 
   return (
     <SafeAreaView>
-      <BackArrow />
+      <View style={{paddingHorizontal: 15}}>
+        <BackArrow />
+      </View>
       <View style={{paddingBottom: 50}}></View>
 
       <View style={styles.container}>

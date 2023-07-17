@@ -35,6 +35,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>To Find your current Location</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>To Find your current Location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>To Find your current Location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
