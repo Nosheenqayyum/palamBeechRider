@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { View, useWindowDimensions } from 'react-native';
-import { TabView, SceneMap } from 'react-native-tab-view';
+import { View, useWindowDimensions,StyleSheet,StatusBar,TouchableOpacity,Animated } from 'react-native';
+import { TabView, SceneMap, TabBar,TabBarIndicator } from 'react-native-tab-view';
 import CustomHeader from '../../components/CustomHeader';
 
 const FirstRoute = () => (
@@ -25,6 +25,8 @@ export default function Orders() {
     { key: 'second', title: 'Completed' },
   ]);
 
+
+
   return (
     <View style={{ flex: 1 }}>
         <CustomHeader title="Orders" showBackButton />
@@ -33,6 +35,7 @@ export default function Orders() {
     <TabView
       navigationState={{ index, routes }}
       renderScene={renderScene}
+renderTabBar={props => <TabBar {...props} style={{backgroundColor: 'black'}}/>}
       onIndexChange={setIndex}
       initialLayout={{ width: layout.width }}
     />
@@ -40,3 +43,20 @@ export default function Orders() {
     </View>
   );
 }
+
+
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    tabBar: {
+      flexDirection: 'row',
+      paddingTop: StatusBar.currentHeight,
+    },
+    tabItem: {
+      flex: 1,
+      alignItems: 'center',
+      padding: 16,
+    },
+  });
