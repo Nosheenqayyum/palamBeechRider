@@ -2,17 +2,17 @@ import * as React from 'react';
 import { View, useWindowDimensions,StyleSheet,StatusBar,TouchableOpacity,Animated } from 'react-native';
 import { TabView, SceneMap, TabBar,TabBarIndicator } from 'react-native-tab-view';
 import CustomHeader from '../../components/CustomHeader';
+import TodaysOrder from './todaysOrder';
 
-const FirstRoute = () => (
-  <View style={{ flex: 1 }} />
-);
+
 
 const SecondRoute = () => (
   <View style={{ flex: 1 }} />
 );
 
+
 const renderScene = SceneMap({
-  first: FirstRoute,
+  first: TodaysOrder,
   second: SecondRoute,
 });
 
