@@ -11,6 +11,8 @@ import Home from "../screens/home/Home";
 import orderDetails from "../screens/orders/orderDetails";
 import MapsView from "../screens/home/mapsView";
 import chat from "../screens/chat/chat";
+import notifications from "../notifications/notifications";
+import Orders from "../screens/orders/orders";
 
 export default function MainNavigation() {
     const Stack = createNativeStackNavigator();
@@ -31,6 +33,8 @@ export default function MainNavigation() {
                 <Stack.Screen name={SCREENS.orderDetails} component={orderDetails} />
                 <Stack.Screen name={SCREENS.mapsView} component={MapsView} />
                 <Stack.Screen name={SCREENS.chat} component={chat} />
+                <Stack.Screen name={SCREENS.notifications} component={notifications} />
+                <Stack.Screen name={SCREENS.orders} component={Orders} />
 
 
             </Stack.Navigator>

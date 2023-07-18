@@ -407,6 +407,8 @@ PODS:
     - React-Core
   - react-native-maps (1.3.2):
     - React-Core
+  - react-native-pager-view (6.2.0):
+    - React-Core
   - react-native-safe-area-context (4.7.1):
     - React-Core
   - React-NativeModulesApple (0.72.2):
@@ -609,6 +611,7 @@ DEPENDENCIES:
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-google-maps (from `../node_modules/react-native-maps`)
   - react-native-maps (from `../node_modules/react-native-maps`)
+  - react-native-pager-view (from `../node_modules/react-native-pager-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
@@ -705,6 +708,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-maps"
   react-native-maps:
     :path: "../node_modules/react-native-maps"
+  react-native-pager-view:
+    :path: "../node_modules/react-native-pager-view"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   React-NativeModulesApple:
@@ -798,6 +803,7 @@ SPEC CHECKSUMS:
   React-logger: 48a3629a61899735cbfa9f0b8c5cd44cb1561952
   react-native-google-maps: 035ad2f9b4974f22af3d4d4c6993960a181b0aaf
   react-native-maps: 085f614cf14d3637b2048bb9752da5b1c27c2886
+  react-native-pager-view: 0ccb8bf60e2ebd38b1f3669fa3650ecce81db2df
   react-native-safe-area-context: 9697629f7b2cda43cf52169bb7e0767d330648c2
   React-NativeModulesApple: 5dfdf09b36ffad0c08f401e86569b8f170a0035d
   React-perflogger: e7006abd30efeebef143702550063ca3415e267a

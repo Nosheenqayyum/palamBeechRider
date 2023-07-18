@@ -85,7 +85,8 @@ export const SCREENS = {
   orderDetails: 'orderDetails',
   mapsView: 'mapsView',
   chat: 'chat',
-  
+  notifications: 'notifications',
+  orders: 'orders',
 };
 
 export const SIZES = {

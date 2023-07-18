@@ -101,6 +101,23 @@ const [password, setpassword] = useState("")
                     home
                   </Text>
                 </TouchableOpacity>
+
+                <TouchableOpacity
+                  activeOpacity={0.85}
+                  onPress={() => navigation.navigate(SCREENS.orders)}
+                  style={{paddingLeft: 20, alignSelf: 'flex-end'}}>
+                  <Text
+                    style={{
+                      fontFamily: FONTFAMILY.Medium,
+                      right: 15,
+                      color: COLORS.BLACK,
+                      marginTop: 20,
+                      marginBottom: 20,
+                    }}>
+                  notifications
+                  </Text>
+                </TouchableOpacity>
+
                 <CustomButton
                   title="Sign In"
                   // onPress={() => navigation.navigate(SCREENS.DrawerNavigator)}
